@@ -49,9 +49,10 @@ should return:
     ✅ Input: carddeck[A,B,C,D] => 4
 
 - Check if the cards in the carddeck contains the letters A,B,C and D
-    🙌 Input: carddeck[A,B,C,D] => true
-    🙌 Input: carddeck[A,B,A,B] => false
+    ✅  Input: carddeck[A,B,C,D] => true
+    ✅  Input: carddeck[A,B,A,B] => false
 
-- Draw a card from the carddeck
+- 🙌 Draw a card from the carddeck
+- 🙌 Show a card from the carddeck (seperated function to comply with SOLID)
 - Place the next card under the carddeck
 - Send a message when no cards are left in the carddeck

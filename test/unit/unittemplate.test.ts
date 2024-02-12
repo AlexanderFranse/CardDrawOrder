@@ -1,6 +1,7 @@
 import {
   checkIfCarddeckContainFourCards,
   checkIfCarddeckContainCardsABCD,
+  drawCardFromDeck,
 } from "../../src/template";
 
 describe(`
@@ -36,7 +37,21 @@ The game ends when there are no cards remaining`, () => {
       const cardD = "B";
 
       const carddeck: string[] = [cardA, cardB, cardC, cardD];
-      expect(checkIfCarddeckContainCardsABCD(carddeck)).toBeTruthy();
+      expect(checkIfCarddeckContainCardsABCD(carddeck)).toBeFalsy();
+    });
+
+    describe("After checking the cards, we can draw a card from the table", () => {
+      it("Draw card C. Remaining deck will be A,B and D", () => {
+        const cardA = "A";
+        const cardB = "B";
+        const cardC = "C";
+        const cardD = "D";
+
+        const carddeck: string[] = [cardA, cardB, cardC, cardD];
+        const output: string[] = [cardA, cardB, cardD];
+
+        expect(drawCardFromDeck(carddeck)).toEqual(output);
+      });
     });
   });
 });

@@ -14,3 +14,8 @@ export function checkIfCarddeckContainCardsABCD(input: string[]) {
   }
   return false;
 }
+
+export function drawCardFromDeck(input: string[]) {
+  const filterArray = input.splice(2, 0);
+  return filterArray;
+}
